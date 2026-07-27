@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AL SAYEGH WOOD</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+   <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <div id="welcomeScreen">
+        <h1>مرحباً بكم</h1>
+
+     <p class="send-text">شارك طلبك الآن إلى</p>
+
+<p class="factory-name">الصايغ لتشكيل الألواح الخشبية</p>
+
+   <a href="javascript:void(0)" class="hero-btn" onclick="showOrder()">
+    اطلب الآن
+    <i class="fa-solid fa-paper-plane"></i>
+</a>
+ </div>
+    </div>
+</section>
+
+<div class="pdf-content" id="order">
+<div class="header">
+    <img src="logo.png" class="logo" alt="Logo">
+    
+    <h1>الصايغ</h1>
+
+    <h2>لتشكيل الألواح الخشبية</h2>
+
+    <h3>AL-SAYEGH FOR WOOD PANELS FORMING</h3>
+	
+	<div class="title-line"></div>
+
+</div>
+<div class="main-box">
+<div class="cards-grid">
+
+    <!-- المسؤول -->
+    <div class="card">
+        <div class="card-title">
+		
+            <i class="fa-solid fa-user"></i>
+		
+            <div>
+                <span>المسؤول</span>
+                <small>Responsible Person</small>
+            </div>
+           
+        </div>
+
+       <select id="responsibleName">
+    <option value="">اسم المسؤول</option>
+     <option value="أنس">أنس</option>
+    <option value="أحمد">أحمد</option>
+
+</select> 
+
+    </div>
+
+    <!-- اسم العميل -->
+    <div class="card">
+        <div class="card-title">
+            <i class="fa-solid fa-user"></i>
+		
+            <div>
+                <span>اسم العميل</span>
+                <small>Customer Name</small>
+            </div>
+            
+        </div>
+<input type="text" id ="customerName" placeholder=" اسم العميل الكامل ">
+
+        </div>
+		
+    <!-- التاريخ -->
+    <div class="card">
+        <div class="card-title">
+            <i class="fa-solid fa-calendar-days"></i>
+		
+            <div>
+                <span>التاريخ</span>
+                <small>Date</small>
+            </div>
+           
+        </div>
+
+        <input type="date" id="orderDate">
+
+
+</div>
+
+
+    <!-- بطاقة المقاسات -->
+<div class="card board-card">
+
+    <div class="card-title">
+        <div>
+            <span>مقاسات الألواح</span>
+            <small>Board Dimensions</small>
+        </div>
+    </div>
+
+    <div class="board-preview">
+
+        <!-- العرض -->
+        <div class="board-width-box">
+            <label>العرض (مم)</label>
+          <input type="text" id="boardWidth" inputmode="decimal">
+        </div>
+
+        <!-- اللوح -->
+        <div class="board-area">
+
+            <div class="width-arrow">⟷</div>
+
+            <div class="board-wood"></div>
+
+            <div class="height-arrow">↕</div>
+
+<div class="board-height-box">
+    <label>الطول (مم)</label>
+   <input type="text" id="boardHeight" inputmode="decimal">
+</div>
+
+</div> <!-- نهاية board-area -->
+
+</div> <!-- نهاية board-preview -->
+
+</div> <!-- نهاية board-card -->
+
+
+    <!-- العمود الأوسط -->
+    
+
+        <!-- رقم الطلب -->
+        <div class="card">
+            <div class="card-title">
+                <i class="fa-solid fa-file-lines"></i>
+                <div>
+                    <span>رقم الطلب</span>
+                    <small>Order No.</small>
+                </div>
+            </div>
+
+            <input type="text" id="orderNumber" placeholder="ادخل رقم الطلب">
+            
+        </div>
+
+        <!-- نوع اللوح -->
+        <div class="card">
+            <div class="card-title">
+                <i class="fa-solid fa-table-cells-large"></i>
+                <div>
+                    <span class="board-type-text">نوع اللوح</span>
+                    <small>Board Type (PVC)</small>
+                </div>
+            </div>
+
+            <input type="text"id="boardType" placeholder="ادخل نوع اللوح">
+            
+        </div>
+
+    
+
+    <!-- العمود الأيمن -->
+    
+
+        <!-- الهاتف -->
+        <div class="card">
+            <div class="card-title">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <span>الهاتف</span>
+                    <small>Phone Number</small>
+                </div>
+            </div>
+
+            <input type="text" id="phoneNumber" placeholder="ادخل رقم الهاتف">
+            
+        </div>
+
+        <!-- المادة -->
+        <div class="card">
+            <div class="card-title">
+                <i class="fa-solid fa-cubes"></i>
+                <div>
+                    <span>المادة</span>
+                    <small>Material</small>
+                </div>
+            </div>
+
+            <input type="text" id="materialName" placeholder="ادخل المادة">
+            
+       
+</div>
+	   
+    </div>
+	<!-- ===== جدول الطلبات ===== -->
+<div class="table-section">
+
+    <table class="order-table">
+
+        <thead>
+
+         <tr>
+
+    <th colspan="2">
+        الإدارة
+        <br>
+        <small>Actions</small>
+    </th>
+
+    <th colspan="4">
+        مقاسات الألواح
+        <br>
+        <small>Board Dimensions</small>
+    </th>
+
+    <th colspan="4">
+        لصق الحواف
+        <br>
+        <small>Edge Banding</small>
+    </th>
+
+</tr>  
+        
+          <tr>
+          <th>حذف<br><small>Delete</small></th>
+          <th>م<br><small>No.</small></th>
+          <th>المواصفات<br><small>Specifications</small></th>
+          <th>الطول (مم)<br><small>Length (mm)</small></th>
+          <th>العرض (مم)<br><small>Width (mm)</small></th>
+          <th>العدد<br><small>Qty</small></th>
+          <th>طويل<br><small>Long</small></th>
+          <th>طويل<br><small>Long</small></th>
+          <th>قصير<br><small>Short</small></th>
+          <th>قصير<br><small>Short</small></th>
+        </tr>
+
+        </thead>
+
+        <tbody id="tableBody">
+       <tr>
+
+    <td><button class="delete-btn">🗑</button></td>
+
+    <td class="row-number">1</td>
+
+    <td>
+        <textarea class="spec-input" placeholder="اكتب المواصفات..."></textarea>
+    </td>
+
+    <td><input type="text" class="length-input" inputmode="decimal"></td>
+
+<td><input type="text" class="width-input" inputmode="decimal"></td>
+
+<td><input type="text" class="qty-input" inputmode="decimal"></td>
+    <td><input type="checkbox"></td>
+
+    <td><input type="checkbox"></td>
+
+    <td><input type="checkbox"></td>
+
+    <td><input type="checkbox"></td>
+
+</tr>
+        </tbody>
+
+    </table>
+<div class="table-actions">
+   <div class="bottom-bar">
+    
+    <div class="boards-info">
+        <span>إجمالي الألواح</span>
+        <strong id="boardsCount">0</strong>
+        <small>Total Boards</small>
+    </div>
+    
+    <button id="addRowBtn" class="add-row-btn">
+        ➕ إضافة سطر جديد
+    </button>
+
+<button id="pdfBtn" class="pdf-btn">
+    📄 حفظ PDF
+</button>
+<button id="shareBtn" class="pdf-btn">
+    📤 مشاركة PDF
+</button>
+</div>
+</div>
+       </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>  
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/vfs_fonts.js"></script>
+   <script src="script.js"></script>
+<script src="pdf.js"></script> 
+<script src="print.js"></script>
+  </div>  
+<div id="pdfContainer" style="display:none;"></div>
+<script>
+function showOrder() {
+
+    const hero = document.querySelector(".hero");
+    const order = document.querySelector(".pdf-content");
+
+    hero.style.transition = "opacity 0.8s ease";
+    hero.style.opacity = "0";
+
+   setTimeout(() => {
+    hero.style.display = "none";
+    order.style.display = "flex";
+
+    setTimeout(() => {
+        order.style.opacity = "1";
+    }, 50);
+
+}, 800);
+}
+
+</script>
+</body>
+
+</html>
