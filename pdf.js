@@ -169,7 +169,11 @@ document.getElementById("shareBtn").style.display = "none";
 const canvas = await html2canvas(element, {
     scale: 2,
     useCORS: true,
-    backgroundColor: null
+    backgroundColor: "#F8F5EE",
+scrollX: 0,
+scrollY: -window.scrollY,
+windowWidth: document.documentElement.scrollWidth,
+windowHeight: document.documentElement.scrollHeight
 });
 const imgData = canvas.toDataURL("image/jpeg",0.82);
 
