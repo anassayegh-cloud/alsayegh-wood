@@ -632,7 +632,33 @@ direction: ltr;
 }
 /* ===== Mobile Scale ===== */
 @media (max-width:768px){
+.hero{
+    min-height:100vh;
+    height:auto;
+    background-size:cover;
+    background-position:center;
+}
 
+.hero-content{
+    padding:90px 20px 40px;
+}
+
+.hero h1{
+    font-size:34px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.factory-name{
+    font-size:34px !important;
+}
+
+.hero-btn{
+    font-size:18px;
+    padding:16px 34px;
+}
 html,
 body{
     margin:0;
