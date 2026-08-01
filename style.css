@@ -644,11 +644,32 @@ direction: ltr;
 }
 
 .hero-content{
-    width:100%;
-    max-width:380px;
-    margin:0 auto;
-    padding-top:260px;
-    text-align:center;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    padding-top: 330px;
+    text-align: center;
+}
+
+.send-text{
+    position: static;
+    font-size: 15px !important;
+    line-height: 1.6;
+    margin: 0 0 8px;
+    opacity: .9;
+}
+
+.factory-name{
+    font-size: 28px !important;
+    line-height: 1.55;
+    margin: 0 0 25px;
+    font-weight: 700;
+}
+
+.hero-btn{
+    font-size: 17px;
+    padding: 14px 35px;
+    border-radius: 50px;
 }
 
 .hero-logo{
@@ -656,10 +677,6 @@ direction: ltr;
     margin:0 auto 20px;
 }
 
-.factory-name{
-    font-size:46px !important;
-    line-height:1.1;
-}
 
 .hero h1{
     font-size:32px;
@@ -673,11 +690,7 @@ direction: ltr;
     margin:15px 0 30px;
 }
 
-.hero-btn{
-    font-size:20px;
-    padding:18px 48px;
-    border-radius:50px;
-}
+
 
 html,
 body{
@@ -687,8 +700,5 @@ body{
     background:#17120e;
 }
 
-body{
-    zoom:1;
-}
 
 }
