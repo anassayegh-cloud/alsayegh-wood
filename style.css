@@ -504,10 +504,10 @@ html, body {
     position: relative;
     height: 100vh;
 
-    background-image: url("hr.jpg");
+    background-image: url("hero-neww.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center -20px;
+    background-size: cover;
+    background-position: center center;
 
     background-color: #17120e;
 
